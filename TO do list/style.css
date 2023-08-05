@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(150deg, rgb(203, 35, 164), blue);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #ffdff5;
+    margin: 100px auto 20px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.todo-app h1 {
+    color: rgb(183, 69, 183);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.todo-app h1 img {
+
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 171, 224);
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+#inputbox{
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    color: rgb(62, 40, 172);
+    font-weight: 14px;
+    padding-left: 20px;
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px ;
+    background-color: #ff63bb;
+    color: #ffffff;
+    font-weight: Bold;
+}
+
+ul li{
+    background-color: rgb(246 206 255);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 8px 28px 9px 36px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    position: relative;
+    margin-bottom: 7px;
+}
+
+ul li::before{
+     content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(images/radio.png);
+    background-size: cover;
+    background-position: center;
+    top: 6px;
+    left: 10px;
+
+}
+
+ul li.checked{
+    color: #696868;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+
+}
+
+ul li span{
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    font-size: 22px;
+    right: 0px;
+    top: 1px;
+    font-weight: bolder;
+    color: #090909;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 4px;
+
+}
+ul li span:hover{
+    background: rgb(255 171 224);
+}
